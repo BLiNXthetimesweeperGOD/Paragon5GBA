@@ -22,3 +22,7 @@ Several games used this driver. A few games worth noting:
 - 50-58 - Set note base pitch (subtract 0x50 from it for the value)
 - 84, 85 - Pitch bends (how they work is unknown)
 
+# Using PFivetoMIDI
+Be sure that the Python mido library is installed and double click the script before navigating to your ROM.
+
+Double click your ROM and the sequences should be converted to MIDI files in a folder named "/(ROM name)/" in the same folder as the ROM.
