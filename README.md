@@ -1,6 +1,8 @@
 # About
 A repository for reverse engineering and documenting the Paragon 5/GBASS sound driver
 
+Feel free to reimplement, borrow or use this documentation for your own research and tools.
+
 Several games used this driver. A few games worth noting:
 - Godzilla: Domination!
 - Shantae Advance (prototype/demo version, used Godzilla BGM as placeholders)
