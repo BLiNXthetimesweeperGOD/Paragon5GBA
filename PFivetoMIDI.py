@@ -165,8 +165,8 @@ with open(file, "rb") as f:
                         if CMD1 == 0x43:
                             noteOffLength = f.read(1)[0]
                             if noteOffLength == 0:
-                                print("Broke!")
-                                input()
+                                #print("Broke!")
+                                #input()
                                 break
                             add_midi_message('note_off', 0, lastNote, 127, noteOffLength)
                             totalNoteLength+=noteOffLength
