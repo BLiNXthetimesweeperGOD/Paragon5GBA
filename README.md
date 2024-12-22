@@ -14,6 +14,7 @@ Several games used this driver. A few games worth noting:
 - Has a super easy to scan for byte string that shows up right before the song table (00 00 00 00 01 01 00 00 XX 00 00 00) (XX is the engine version number)
 - Each channel is assigned an instrument alongside the pointer to the sequence table for the said channel
 - Each channel of a song is stored as several sub-sequences with a timer between each one (if a sequence is corrupted, the next one will always eventually start playing)
+- Notes are played on a timer which appears to be done in frames. Each frame advanced on the GBA will generally decrease the timer value in RAM by 1. Lag will also generally slow the engine down.
 
 # Currently known command list
 - 0000 - End of sequence
