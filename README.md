@@ -5,7 +5,7 @@ Feel free to reimplement, borrow or use this documentation for your own research
 
 Several games used this driver. A few games worth noting:
 - Godzilla: Domination!
-- Shantae Advance (prototype/demo version, used Godzilla BGM as placeholders)
+- Shantae 2: Risky Revolution (Demo) (was recently released, reuses stuff from Godzilla)
 - Hardcore Pinball
 
 
@@ -31,8 +31,5 @@ Be sure that the Python mido library is installed and double click the script be
 Double click your ROM and the sequences should be converted to MIDI files in a folder named "/(ROM name)/" in the same folder as the ROM.
 
 To-do list:
-- Find out why the script is escaping the sequences in almost every single case (all of them have been confirmed to end on 0000, but the script reads past that and continues parsing data)
-- Find out how pitch bends work
-- Fix an issue where some sequences are way faster or slower than intended - possibly caused by a command that sets the tempo
-- Improve the sequence table handling
-- Add better variable names (this script is based off of an older script I made back in 2022)
+- Rewrite the entire script to use my Python BitReader class
+- Document unknown commands
