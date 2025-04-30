@@ -31,5 +31,5 @@ Be sure that the Python mido library is installed and double click the script be
 Double click your ROM and the sequences should be converted to MIDI files in a folder named "/(ROM name)/" in the same folder as the ROM.
 
 To-do list:
-- Rewrite the entire script to use my Python BitReader class
+- Rewrite the entire script to improve readability and make use of my Python BitReader class
 - Document unknown commands
