@@ -14,16 +14,16 @@ Several games used this driver. A few games worth noting:
 - Has a super easy to scan for byte string that shows up right before the song table (00 00 00 00 01 01 00 00 XX 00 00 00) (XX is the playback quality, which can be 1 to 4)
 - Each channel is assigned an instrument alongside the pointer to the sequence table for the said channel
 - Each channel of a song is stored as several sub-sequences with a timer between each one (if a sequence is corrupted, the next one will always eventually start playing)
-- Notes are played on a timer which appears to be done in frames. Each frame advanced on the GBA will generally decrease the timer value in RAM by 1. Lag will also generally slow the engine down.
+- This is a tracker-style driver, not a MIDI driver. It does have some similarities despite that though.
 
 # Currently known command list
-- 0000 - End of sequence
-- 0X, 00XX - Note off event for X amount of time
-- 1X - Unknown
+- 0000 - End of pattern (this would play nothing for a duration of 0 rows)
+- 0X, 00XX - play X amount of Empty rows
+- 1X - Unknown (might be some sort of effect parameter? Effect strength?)
 - 20-2C - Note (subtract 0x20 from it and add the note base pitch value * 0xC to it)
-- 30-4F - Unknown
+- 30-4F - Unknown (could also be effect strength?)
 - 50-58 - Set note base pitch (subtract 0x50 from it for the value)
-- 84, 85 - Pitch bends (how they work is unknown)
+- 84, 85 - Pitch shifts? 8 could tell the driver that the next nibble is the effect ID?
 
 # Using PFivetoMIDI
 Be sure that the Python mido library is installed and double click the script before navigating to your ROM.
